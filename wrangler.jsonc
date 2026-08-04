@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "opc-3d-finance",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-08-01",
+  "assets": { "directory": "./public", "binding": "ASSETS" },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "opc-3d-db",
+      "database_id": "BURAYA_D1_DATABASE_ID"
+    }
+  ]
+}

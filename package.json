@@ -1,0 +1,21 @@
+{
+  "name": "opc-3d-finance",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:migrate:remote": "wrangler d1 migrations apply opc-3d-db --remote",
+    "db:seed:remote": "wrangler d1 execute opc-3d-db --remote --file=./migrations/0002_seed.sql"
+  },
+  "dependencies": {
+    "hono": "^4.9.0",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260731.0",
+    "typescript": "^5.9.2",
+    "wrangler": "^4.27.0"
+  }
+}
